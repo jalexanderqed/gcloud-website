@@ -32,7 +32,7 @@ mkdir -p /opt/jetty/temp
 mkdir -p /var/log/jetty
 
 # Get Jetty
-curl -L http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.13.v20181111/jetty-distribution-9.4.13.v20181111.tar.gz -o jetty9.tgz
+curl -L https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-distribution/9.4.13.v20181111/jetty-distribution-9.4.13.v20181111.tar.gz -o jetty9.tgz
 tar xf jetty9.tgz  --strip-components=1 -C /opt/jetty
 
 # Add a Jetty User
@@ -44,13 +44,13 @@ java -jar /opt/jetty/start.jar --add-to-startd=setuid
 cd /
 
 # Clone the source repository.
-git clone https://github.com/GoogleCloudPlatform/getting-started-java
-cd getting-started-java/gce
+git clone https://github.com/jalexanderqed/gcloud-website.git
+cd gcloud-website
 
 # Build the .war file and rename.
 # very important - by renaming the war to root.war, it will run as the root servlet.
 mvn clean package -q
-mv target/getting-started-gce-1.0-SNAPSHOT.war /opt/jetty/webapps/root.war
+mv target/website-1.0.war /opt/jetty/webapps/root.war
 
 # Make sure "jetty" owns everything.
 chown --recursive jetty /opt/jetty

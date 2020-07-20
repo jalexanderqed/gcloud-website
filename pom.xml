@@ -19,9 +19,9 @@ Copyright 2019 Google LLC
   <modelVersion>4.0.0</modelVersion>
   <packaging>war</packaging>
 
-  <groupId>com.google.gce.demos</groupId>
-  <artifactId>getting-started-gce</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <groupId>ninja.jalexander</groupId>
+  <artifactId>website</artifactId>
+  <version>1.0</version>
 
   <parent>
     <groupId>com.google.cloud.samples</groupId>
