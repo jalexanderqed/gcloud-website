@@ -1,11 +1,7 @@
 # Getting Started with Java - Google Compute Engine
 
-See the [Bookshelf tutorial][tutorial] for help getting started with Google App Engine (Standard), Google Cloud
-Firestore, and more.
-
-You'll need to [create a bucket][create-bucket] in Google Cloud Storage,
-referred to below as `MY-BUCKET`. You'll also need to create an OAuth2 client
-and secret, and edit `pom.xml` with its values.
+Originally derived from [this repo](https://github.com/GoogleCloudPlatform/getting-started-java)
+and set up using [this tutorial](https://cloud.google.com/java/docs/tutorials/getting-started-on-compute-engine)
 
 ### Running Locally
 
@@ -31,19 +27,4 @@ and secret, and edit `pom.xml` with its values.
 * To tear down the App, use
 
         ./makeProject down
-        
-### Deploying to Compute Engine with horizontal scaling
 
-* Initialize Google Cloud SDK and `makeProject` as above.
-
-* Deploy your App
-
-        ./makeProject gce-many
-
-* To tear down the App, use
-
-        ./makeProject down-many
-
-[tutorial]: https://cloud.google.com/java/getting-started/tutorial-app
-[create-bucket]: https://cloud.google.com/storage/docs/creating-buckets#storage-create-bucket-console
-[cloud_sdk]: https://cloud.google.com/sdk/
