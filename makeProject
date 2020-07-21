@@ -21,6 +21,7 @@ BUCKET=
 
 REGION=us-central1
 ZONE=$REGION-f
+JOB_NAME=website-server
 
 GROUP=frontend-group
 TEMPLATE=$GROUP-tmpl
@@ -87,7 +88,7 @@ gce)
     --description "Allow port 80 access to instances tagged with ${TAGS}" \
     || echo "allow-http firewall rule already exists"
 
-  gcloud compute instances create my-app-instance \
+  gcloud compute instances create ${JOB_NAME} \
     --machine-type=${MACHINE_TYPE} \
     --scopes=${SCOPES} \
     --metadata-from-file startup-script=${STARTUP_SCRIPT} \
@@ -101,8 +102,8 @@ gce)
 
 down)
   set -v
-  gcloud compute instances delete my-app-instance --zone=${ZONE} --quiet
-  gcloud compute firewall-rules delete allow-http-hello-world --quiet
+  gcloud compute instances delete ${JOB_NAME} --zone=${ZONE} --quiet
+  gcloud compute firewall-rules delete allow-http --quiet
   ;;
 
 gce-many)
@@ -129,7 +130,7 @@ gce-many)
 
 # Add a firewall rule so that we can connect directly to
 # the compute instances in the group.
-  gcloud compute firewall-rules create allow-http-hello-world \
+  gcloud compute firewall-rules create allow-http \
     --allow tcp:80 \
     --source-ranges 0.0.0.0/0 \
     --target-tags ${TAGS} \
@@ -232,7 +233,7 @@ down-many)
   gcloud compute backend-services delete $SERVICE --global --quiet
   gcloud compute http-health-checks delete ah-health-check --quiet
   gcloud compute instance-groups managed delete $GROUP --zone $ZONE --quiet
-  gcloud compute firewall-rules delete allow-http-hello-world --quiet
+  gcloud compute firewall-rules delete allow-http  --quiet
   gcloud compute instance-templates delete $TEMPLATE --quiet
 # [END getting_started_stop_gce]
   ;;
