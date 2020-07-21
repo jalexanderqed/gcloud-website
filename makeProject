@@ -22,6 +22,7 @@ BUCKET=
 REGION=us-central1
 ZONE=$REGION-f
 JOB_NAME=website-server
+IP_ADDRESS="35.226.206.246"
 
 GROUP=frontend-group
 TEMPLATE=$GROUP-tmpl
@@ -89,6 +90,7 @@ gce)
     || echo "allow-http firewall rule already exists"
 
   gcloud compute instances create ${JOB_NAME} \
+    --address=${IP_ADDRESS} \
     --machine-type=${MACHINE_TYPE} \
     --scopes=${SCOPES} \
     --metadata-from-file startup-script=${STARTUP_SCRIPT} \
