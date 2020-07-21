@@ -27,4 +27,3 @@ and set up using [this tutorial](https://cloud.google.com/java/docs/tutorials/ge
 * To tear down the App, use
 
         ./makeProject down
-
