@@ -9,7 +9,11 @@ and secret, and edit `pom.xml` with its values.
 
 ### Running Locally
 
-    mvn clean jetty:run-exploded -DprojectID=YOUR-PROJECT-ID
+    mvn clean jetty:run-exploded -DprojectID=jalexander-website
+
+### Listing Compute Instances
+
+    gcloud compute instances list
 
 ### Deploying to Compute Engine
 
