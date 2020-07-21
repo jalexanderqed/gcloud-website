@@ -18,6 +18,7 @@ package com.example.getstarted.basicactions;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -26,8 +27,9 @@ import javax.servlet.http.HttpServletResponse;
 public class IndexController extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    resp.getWriter().write("Hello world - this is Jack Alexander's home page!");
-    resp.setStatus(HttpServletResponse.SC_OK);
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    Object data = "Some data, can be a String or a Javabean";
+    request.setAttribute("data", data);
+    request.getRequestDispatcher("/index.jsp").forward(request, response);
   }
 }
