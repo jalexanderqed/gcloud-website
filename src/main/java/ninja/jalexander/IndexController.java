@@ -27,7 +27,8 @@ import javax.servlet.http.HttpServletResponse;
 public class IndexController extends HttpServlet {
 
   @Override
-  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
+      throws IOException, ServletException {
     Object data = "Some data, can be a String or a Javabean";
     request.setAttribute("data", data);
     request.getRequestDispatcher("/index.jsp").forward(request, response);
