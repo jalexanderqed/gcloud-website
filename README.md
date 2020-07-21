@@ -9,16 +9,13 @@ and set up using [this tutorial](https://cloud.google.com/java/docs/tutorials/ge
 
         gcloud init
 
-* In the `makeProject` script update the `BUCKET` environment variable
-  with your bucket name.
-
 * Deploy your App
 
-        ./makeProject gce
+    ./makeProject gce
 
 * To tear down the App, use
 
-        ./makeProject down
+    ./makeProject down
 
 ### Running Locally
 
