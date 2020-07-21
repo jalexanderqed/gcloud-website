@@ -22,12 +22,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(value = "/")
+@WebServlet(value = "/hello")
 public class HelloworldController extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    resp.getWriter().write("Hello world - jalexander website!");
+    resp.getWriter().write("Hello world - this is Jack Alexander's website!");
     resp.setStatus(HttpServletResponse.SC_OK);
   }
 }
