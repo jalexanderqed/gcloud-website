@@ -79,15 +79,13 @@ deploy)
 gce)
   set -v
 # [START getting_started_gce_single]
-  mvn clean package
 
-  gsutil cp -r target/${WAR} config/base gs://${BUCKET}/gce/
-
-  gcloud compute firewall-rules create allow-http-hello-world \
+  gcloud compute firewall-rules create allow-http \
     --allow tcp:80 \
     --source-ranges 0.0.0.0/0 \
     --target-tags ${TAGS} \
-    --description "Allow port 80 access to instances tagged with ${TAGS}"
+    --description "Allow port 80 access to instances tagged with ${TAGS}" \
+    || echo "allow-http firewall rule already exists"
 
   gcloud compute instances create my-app-instance \
     --machine-type=${MACHINE_TYPE} \
@@ -96,8 +94,8 @@ gce)
     --zone=${ZONE} \
     --tags=${TAGS} \
     --image-family=${IMAGE_FAMILY} \
-    --image-project=${IMAGE_PROJECT} \
-    --metadata BUCKET=${BUCKET}
+    --image-project=${IMAGE_PROJECT}
+
 # [END getting_started_gce_single]
   ;;
 
