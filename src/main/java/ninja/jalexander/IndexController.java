@@ -31,6 +31,6 @@ public class IndexController extends HttpServlet {
       throws IOException, ServletException {
     Object data = "Some data, can be a String or a Javabean";
     request.setAttribute("data", data);
-    request.getRequestDispatcher("/index.jsp").forward(request, response);
+    request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
   }
 }

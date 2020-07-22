@@ -1,3 +1,54 @@
 body {
-    background: black;
+    background-color: black;
+    color: white;
+}
+
+.ja-navbar {
+    width: fit-content;
+    margin: auto;
+
+    color: white;
+    background-color: #343a40;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.ja-navbar .left-item * {
+    border-bottom-left-radius: 25px;
+}
+
+.ja-navbar .right-item * {
+    border-bottom-right-radius: 25px;
+}
+
+.ja-navbar .active {
+    background-color: darkblue!important;
+}
+
+.ja-navbar a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.ja-navbar a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.ja-navbar a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.ja-navbar a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
 }

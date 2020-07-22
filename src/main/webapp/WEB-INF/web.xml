@@ -27,12 +27,20 @@
 
     <servlet>
         <servlet-name>index</servlet-name>
-        <jsp-file>/index.jsp</jsp-file>
+        <jsp-file>/WEB-INF/jsp/index.jsp</jsp-file>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>index</servlet-name>
         <url-pattern></url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>credits</servlet-name>
+        <jsp-file>/WEB-INF/jsp/credits.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>credits</servlet-name>
+        <url-pattern>/credits</url-pattern>
     </servlet-mapping>
 </web-app>
 <!-- [END webxml] -->
