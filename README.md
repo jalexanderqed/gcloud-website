@@ -1,4 +1,6 @@
-# Getting Started with Java - Google Compute Engine
+## My Personal website
+
+Hosted at http://jalexander.ninja
 
 Originally derived from [this repo](https://github.com/GoogleCloudPlatform/getting-started-java)
 and set up using [this tutorial](https://cloud.google.com/java/docs/tutorials/getting-started-on-compute-engine)
