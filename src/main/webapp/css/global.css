@@ -1,6 +1,7 @@
 body {
     background-color: black;
     color: white;
+    font-family: 'Ubuntu Mono';
 }
 
 .ja-navbar {
@@ -27,6 +28,30 @@ body {
 
 .ja-navbar .active {
     background-color: darkblue!important;
+}
+
+a:link {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: lightblue;
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 .ja-navbar a:link {

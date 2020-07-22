@@ -9,6 +9,9 @@
 <jsp:include page="/WEB-INF/jsp/lib/navbar.jsp"/>
 
 <div class=container>
+    <h1>Jack Alexander</h1>
+    <br/>
+    <h3>Simplicity</h3>
     Lorem ipsum dolor sit amet, an altera praesent reformidans usu,
     duo augue tantas id, graeci minimum repudiare eu sit. Eum id enim
     nemore electram, cu fierent periculis ius. Ex qui malis cetero. Eos
