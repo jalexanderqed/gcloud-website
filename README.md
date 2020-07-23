@@ -12,6 +12,7 @@ and set up using [this tutorial](https://cloud.google.com/java/docs/tutorials/ge
         gcloud init
 
 * Switch to the approriate GCE project
+
         gcloud config set project PROJECT_ID
 
 * Deploy your App
