@@ -16,7 +16,7 @@
         <li>
             <span>
                 <img id="favicon-example" class="center-vert" alt="Drawing of the website author"
-                    src="https://storage.cloud.google.com/jalexander-website-bucket/MeE_cropped_small.png">
+                    src="https://storage.googleapis.com/jalexander-website-bucket/MeE_cropped_small.png">
                 <span>
                     Favicon by <a href="https://zochascribe.tumblr.com/">zochascribe.tumblr.com</a>
                 </span>
