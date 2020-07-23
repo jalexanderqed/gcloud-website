@@ -8,16 +8,13 @@
 <body>
 <jsp:include page="/WEB-INF/jsp/lib/navbar.jsp"/>
 
-<div class=container>
+<div class="container ja-outer">
     <h1>Jack Alexander</h1>
     <br/>
     <h2>Simplicity</h2>
     <h1>Heading 1 ()</h1>
     <h2>Heading 2 ()</h2>
     <h3>Heading 3 ()</h3>
-    <h4>Heading 4 ()</h4>
-    <h5>Heading 5 ()</h5>
-    <h6>Heading 6 ()</h6>
     Lorem ipsum dolor sit amet, an altera praesent reformidans usu,
     duo augue tantas id, graeci minimum repudiare eu sit. Eum id enim
     nemore electram, cu fierent periculis ius. Ex qui malis cetero. Eos

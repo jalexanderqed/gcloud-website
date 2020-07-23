@@ -10,7 +10,7 @@
 
 <jsp:include page="/WEB-INF/jsp/lib/navbar.jsp"/>
 
-<div class=container>
+<div class="container ja-outer">
     <h1>Credits</h1>
     <ul>
         <li>
