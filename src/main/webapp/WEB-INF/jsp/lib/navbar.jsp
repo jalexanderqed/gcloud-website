@@ -7,17 +7,27 @@
     <li class="nav-item left-item">
         <a
             <c:choose>
-                <c:when test="${servletPath == ''}">class="nav-link active"</c:when>
+                <c:when test="${pageName == 'index'}">class="nav-link active"</c:when>
                 <c:otherwise>class="nav-link"</c:otherwise>
             </c:choose>
             href="/">
             Home
         </a>
    </li>
+   <li class="nav-item">
+        <a
+            <c:choose>
+                <c:when test="${pageName == 'ping'}">class="nav-link active"</c:when>
+                <c:otherwise>class="nav-link"</c:otherwise>
+            </c:choose>
+            href="/ping">
+            Ping
+        </a>
+    </li>
    <li class="nav-item right-item">
         <a
             <c:choose>
-                <c:when test="${servletPath == '/credits'}">class="nav-link active"</c:when>
+                <c:when test="${pageName == 'credits'}">class="nav-link active"</c:when>
                 <c:otherwise>class="nav-link"</c:otherwise>
             </c:choose>
             href="/credits">

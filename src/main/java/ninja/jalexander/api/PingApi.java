@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.getstarted.basicactions;
+package ninja.jalexander.api;
 
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
@@ -22,15 +22,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import ninja.jalexander.util.Constants;
 
-@WebServlet(value = "/index")
-public class IndexController extends HttpServlet {
+@WebServlet(value = "/api/ping")
+public class PingApi extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws IOException, ServletException {
-    Object data = "Some data, can be a String or a Javabean";
-    request.setAttribute("data", data);
-    request.getRequestDispatcher("/WEB-INF/jsp/index.jsp").forward(request, response);
+    response.setContentType(Constants.JSON_CONTENT_TYPE);
+    response.getWriter().println("{}");
   }
 }
