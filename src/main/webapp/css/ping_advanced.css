@@ -1,9 +1,7 @@
-#current-ping {
-    text-align: center;
+#ping-chart {
+    fill: white;
 }
 
-#advanced-btn {
-    color: white;
-    border-color: white;
-    font-weight: bold;
+.c3-tooltip-container {
+    color: black;
 }
