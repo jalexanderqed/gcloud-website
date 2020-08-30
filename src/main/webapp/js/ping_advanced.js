@@ -2,13 +2,17 @@ let kBucketPeriod = 6000;
 let kPingPeriod = 50;
 let kMaxBuckets = 40;
 
+function getRowHeader() {
+    return ["periodEnd", "min", "50%", "95%", "99%", "max"];
+}
+
 let chart = c3.generate({
     bindto: "#ping-chart",
     data: {
         x: "periodEnd",
         xFormat: "%Y-%m-%dT%H:%M:%S.%LZ",
         rows: [
-            ["periodEnd", "50%", "95%", "99%", "max"]
+            getRowHeader()
         ]
     },
     transition: {
@@ -16,9 +20,9 @@ let chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'timeseries',
+            type: "timeseries",
             tick: {
-                format: '%H:%M:%S'
+                format: "%H:%M:%S"
             },
             label: "Time at End of Window"
         },
@@ -61,6 +65,7 @@ DataBucket.prototype.getRowData = function() {
     this.sorted = true;
     return [
         new Date(this.startDate.getTime() + kBucketPeriod).toISOString(),
+        this.pings[0],
         this.pings[Math.floor(0.5 * this.pings.length)],
         this.pings[Math.floor(0.95 * this.pings.length)],
         this.pings[Math.floor(0.99 * this.pings.length)],
@@ -85,7 +90,7 @@ function updateChart() {
     while(buckets.length > kMaxBuckets) {
         buckets.shift();
     }
-    let rows = [["periodEnd", "50%", "95%", "99%", "max"]];
+    let rows = [getRowHeader()];
     buckets.forEach(function(bucket) {
         let row = bucket.getRowData();
         if(row !== null) {
@@ -102,7 +107,7 @@ function updateChart() {
 function addNewBucket(now) {
     let alignedMillis = now.getTime() - (now.getTime() % kBucketPeriod);
     buckets.push(new DataBucket(new Date(alignedMillis)));
-    setTimeout(updateChart, 1000);
+    setTimeout(updateChart, kBucketPeriod / 2);
 }
 
 function recordError(error) {
