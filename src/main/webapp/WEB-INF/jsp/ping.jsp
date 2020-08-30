@@ -10,7 +10,13 @@
 
 <jsp:include page="/WEB-INF/jsp/lib/navbar.jsp"/>
 
-<h1 id="current-ping"></h1>
+<div class="d-flex justify-content-center">
+    <h1 id="current-ping"></h1>
+</div>
+<br>
+<div class="d-flex justify-content-center">
+    <a id="advanced-btn" href="/ping_advanced" class="btn btn-primary btn-lg">Advanced</a>
+</div>
 
 <jsp:include page="/WEB-INF/jsp/lib/foot.jsp"/>
 <script src="js/ping.js"></script>
