@@ -13,6 +13,9 @@
 <div class="d-flex justify-content-center">
     <h1 id="current-ping"></h1>
 </div>
+<div class="d-flex justify-content-center">
+    <h3 id="ping-error">&nbsp;</h3>
+</div>
 <br>
 <div class="d-flex justify-content-center">
     <a id="advanced-btn" href="/ping_advanced" class="btn btn-primary btn-lg">Advanced</a>

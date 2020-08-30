@@ -2,6 +2,11 @@
     text-align: center;
 }
 
+#ping-error {
+    text-align: center;
+    color: red;
+}
+
 #advanced-btn {
     color: white;
     border-color: white;

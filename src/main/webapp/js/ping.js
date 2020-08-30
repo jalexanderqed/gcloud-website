@@ -1,3 +1,11 @@
+function getPingElement() {
+    return document.getElementById("current-ping");
+}
+
+function getErrorElement() {
+    return document.getElementById("ping-error");
+}
+
 function performPingTest() {
     let start_time = performance.now();
     let ping_time = 0.0;
@@ -11,11 +19,12 @@ function performPingTest() {
 }
 
 function recordPing(data, pingTime) {
-    document.getElementById("current-ping").innerHTML = pingTime.toFixed(2);
+    getPingElement().innerHTML = pingTime.toFixed(2);
+    getErrorElement().innerHTML = "&nbsp;";
 }
 
 function recordError(error) {
-    console.log(error);
+    getErrorElement().innerHTML = "Request error";
 }
 
 let intervalID = setInterval(performPingTest, 1000);
