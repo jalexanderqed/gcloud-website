@@ -23,6 +23,7 @@ PROJECTID=$(curl -s "http://metadata.google.internal/computeMetadata/v1/project/
 echo "Project ID: ${PROJECTID}"
 
 # Install dependencies from apt
+apt-get update
 apt-get install -yq openjdk-11-jdk git maven
 
 mvn --version
