@@ -49,25 +49,25 @@ h6 { font-size: 0.95rem; }
 }
 
 a:link {
-  color: lightblue;
+  color: #3498DB;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: lightblue;
+  color: #3498DB;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:hover {
-  color: lightblue;
+  color: #3498DB;
   background-color: transparent;
   text-decoration: underline;
 }
 
 a:active {
-  color: lightblue;
+  color: #3498DB;
   background-color: transparent;
   text-decoration: underline;
 }
