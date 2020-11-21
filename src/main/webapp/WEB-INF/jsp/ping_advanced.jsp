@@ -17,6 +17,13 @@
 
 <jsp:include page="/WEB-INF/jsp/lib/navbar.jsp"/>
 
+<div class="d-flex justify-content-center">
+    <h2 style="color: red;">This ping monitor does not work!</h2>
+</div>
+<div class="d-flex justify-content-center">
+    <h4 style="color: red;">don't worry, your ping isn't nearly this bad</h4>
+</div>
+
 <div id="ping-chart"></div>
 <br>
 <br>
