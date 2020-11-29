@@ -78,6 +78,12 @@ deploy)
   mvn clean gcloud:deploy
   ;;
 
+restart)
+  set -v
+  gcloud compute instance-groups managed rolling-action restart website-group \
+    --zone=${ZONE}
+  ;;
+
 gce)
   set -v
 # [START getting_started_gce_single]
