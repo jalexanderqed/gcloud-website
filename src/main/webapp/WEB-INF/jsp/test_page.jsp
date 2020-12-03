@@ -11,7 +11,7 @@
 
 <div class="container ja-outer">
     <div class="d-flex justify-content-center">
-        <h1 class="float-center">TEST PAGE CONTENT 1</h1>
+        <h1 class="float-center">TEST PAGE CONTENT 2</h1>
     </div>
 </div>
 
