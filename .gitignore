@@ -8,6 +8,9 @@
 *.iml
 .idea/
 
+# Theia
+.theia/
+
 # Target folders
 target/
 build/
