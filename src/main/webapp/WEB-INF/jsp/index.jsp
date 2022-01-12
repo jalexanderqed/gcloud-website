@@ -21,7 +21,7 @@
         </li>
         <li>Working on
         <a href="https://en.wikipedia.org/wiki/Extract,_transform,_load">ETL systems</a>
-        for the Spanner and F1 databaes since 2018</li>
+        for the Spanner and F1 databases since 2018</li>
         <li>
             Currently developing primarily in
             <a href="https://www.cplusplus.com/doc/tutorial/">C++</a>
